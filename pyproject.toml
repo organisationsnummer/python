@@ -9,7 +9,7 @@ description = "Validate Swedish organization numbers"
 license = { file = "./LICENSE" }
 readme = "README.md"
 authors = [
-    { name = "Personnummer and Contributors", email = "hello@personnummer.dev" },
+    { name = "Organisationsnummer and Contributors", email = "hello@organisationsnummer.dev" },
 ]
 classifiers = [
 	"License :: OSI Approved :: MIT License",
