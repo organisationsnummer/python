@@ -1,6 +1,6 @@
 # organisationsnummer [![Build Status](https://github.com/organisationsnummer/python/workflows/test/badge.svg)](https://github.com/organisationsnummer/python/actions)
 
-Validate Swedish personal identity numbers. Version 3+ only supports Python 3.
+Validate Swedish organization numbers. Follows version 1.1 of the [specification](https://github.com/organisationsnummer/meta#package-specification-v11).
 
 ## Installation
 
