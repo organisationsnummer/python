@@ -1,0 +1,14 @@
+/build
+/dist
+.python-version
+.idea
+*.pyc
+*.egg*
+/organisationsnummer.egg-info
+nosetests.xml
+venv
+.*
+!.github
+!.gitignore
+!.meta.yaml
+*.lock

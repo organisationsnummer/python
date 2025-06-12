@@ -1,0 +1,4 @@
+name: "Python"
+maintainer: "@swantzter"
+spec: 1.1
+workflow: "python.yml"
