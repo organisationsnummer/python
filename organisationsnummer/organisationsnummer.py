@@ -49,7 +49,7 @@ class Organisationsnummer:
         self._number = number
 
         try:
-            reg = r"^(\d{2}){0,1}(\d{2})(\d{2})(\d{2})([\-\+]{0,1})?(\d{3})(\d{0,1})$"
+            reg = r"^(\d{2}){0,1}(\d{2})(\d{2})(\d{2})([-+]?)?(\d{3})(\d)$"
             match = re.match(reg, str(object=number))
 
             if not match:
