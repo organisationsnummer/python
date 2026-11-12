@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 version = "1.0.1"
 name = "organisationsnummer"
+requires-python = ">=3.10"
 description = "Validate Swedish organization numbers"
 license = { file = "./LICENSE" }
 readme = "README.md"

@@ -17,17 +17,21 @@ pip3 install organisationsnummer
 ## Examples
 
 - All examples that uses `organisationsnummer.Organisationsnummer([params])`, can be replaced with `organisationsnummer.parse([params])`.
+- The number must be passed as a string.
 
 ### Validation
 
 ```python
 from organisationsnummer import organisationsnummer
 
-organisationsnummer.valid("8507099805")
+organisationsnummer.valid("202100-5489")
 # => True
 
-organisationsnummer.valid("198507099805")
+organisationsnummer.valid("2021005489")
 # => True
+
+organisationsnummer.valid("202100-5480")
+# => False
 ```
 
 ### Format
@@ -36,14 +40,36 @@ organisationsnummer.valid("198507099805")
 from organisationsnummer import organisationsnummer
 
 # Short format
-pn = organisationsnummer.Organisationsnummer(8507099805)
-pn.format()
-# => '8507099805'
+on = organisationsnummer.Organisationsnummer("202100-5489")
+on.format()
+# => '2021005489'
 
 # Long format
-pn = organisationsnummer.Organisationsnummer('8507099805')
-pn.format(True)
-# => '850709-9805'
+on = organisationsnummer.Organisationsnummer("2021005489")
+on.format(True)
+# => '202100-5489'
+```
+
+### Type and VAT number
+
+```python
+from organisationsnummer import organisationsnummer
+
+on = organisationsnummer.parse("202100-5489")
+on.type()
+# => 'Stat, landsting, kommun eller församling'
+
+on.vat_number()
+# => 'SE202100548901'
+```
+
+### Invalid numbers
+
+```python
+from organisationsnummer import organisationsnummer
+
+organisationsnummer.parse("202100-5480")
+# => raises OrganisationsnummerInvalidException
 ```
 
 See [organisationsnummer/tests/test_organisationsnummer.py](organisationsnummer/tests/test_organisationsnummer.py) for more examples.
