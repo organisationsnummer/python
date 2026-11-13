@@ -9,7 +9,7 @@ import json
 
 def get_test_data():
     response = urllib.request.urlopen(
-        "https://raw.githubusercontent.com/organisationsnummer/meta/main/testdata/list.json"
+        "https://raw.githubusercontent.com/organisationsnummer/meta/HEAD/testdata/list.json"
     )
     raw = response.read().decode("utf-8")
     return json.loads(raw)
